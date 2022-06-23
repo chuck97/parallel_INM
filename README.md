@@ -1,7 +1,7 @@
 # parallel_INM
 Course on parallel computing INM RAS
 
-To build all code in INM RAS cluster just type 
+To build all code on INM RAS cluster just type 
 ```
 bash build.sh
 ```
