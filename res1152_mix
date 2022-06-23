@@ -1,0 +1,9 @@
+MPI-1p mvm: N=1152 np=1 th=36 norm=20580.116664 time=0.121575 perf=1091.59 MFLOPS
+MPI-1p mvm: N=1152 np=2 th=18 norm=20580.116664 time=0.095357 perf=1391.72 MFLOPS
+MPI-1p mvm: N=1152 np=3 th=12 norm=20580.116664 time=0.088511 perf=1499.36 MFLOPS
+MPI-1p mvm: N=1152 np=4 th=9 norm=20580.116664 time=0.078496 perf=1690.66 MFLOPS
+MPI-1p mvm: N=1152 np=6 th=6 norm=20580.116664 time=0.054015 perf=2456.94 MFLOPS
+MPI-1p mvm: N=1152 np=9 th=4 norm=20580.116664 time=0.018028 perf=7361.28 MFLOPS
+MPI-1p mvm: N=1152 np=12 th=3 norm=20580.116664 time=0.023157 perf=5730.82 MFLOPS
+MPI-1p mvm: N=1152 np=18 th=2 norm=20580.116664 time=0.025482 perf=5208.03 MFLOPS
+MPI-1p mvm: N=1152 np=36 th=1 norm=20580.116664 time=0.016248 perf=8167.95 MFLOPS

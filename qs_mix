@@ -1,0 +1,27 @@
+#!/bin/bash
+#SBATCH --job-name=22-PSS-mix
+#SBATCH --partition normal
+#SBATCH --nodes=1 --ntasks-per-node=36
+#SBATCH --time=30:00
+#SBATCH --chdir=.
+
+module load intel
+
+## Here: p - number of MPI processes ; t - number of OMP threads ; pt=p*t
+pt=$SLURM_NTASKS
+
+rm -f res1152_mix
+for p in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 ; do
+     t=$(($pt / $p))
+     if [[ $pt == $(($p * $t)) ]] ; then
+         export OMP_NUM_THREADS=$t ; mpirun -n $p ./hybrid-build/mvm 1152 100 >> res1152_mix
+     fi
+done
+
+rm -f res9216_mix
+for p in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 ; do
+     t=$(($pt / $p))
+     if [[ $pt == $(($p * $t)) ]] ; then
+         export OMP_NUM_THREADS=$t ; mpirun -n $p ./hybrid-build/mvm 9216 100 >> res9216_mix
+     fi
+done
